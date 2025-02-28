@@ -1,6 +1,6 @@
 import psycopg2
 
-with psycopg2.connect(database="Clients", user="postgres", password="246564") as conn:
+with psycopg2.connect(database="clients_db", user="postgres", password="postgres") as conn:
 
     def delete_table():
         with conn.cursor() as cur:
@@ -107,10 +107,10 @@ if __name__ == '__main__':
     #delete_table()
     #create_db()
     #add_client("James", "Kuk", "54321")
-    #add_phone_number(3,'3333333')
+    #add_phone_number(1,'1111111')
     #change_client(2,'Fernan','Magellan','Trinidad')
     #del_phone(1,'1111111')
     #del_client(1)
-    search_client("Fernan")
+    #search_client("Fernan")
 
 conn.close()
